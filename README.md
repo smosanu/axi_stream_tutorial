@@ -1,5 +1,4 @@
-# axi_stream_tutorial
-##VIVADO HLS Training AXI Stream Interface
+# VIVADO HLS Training AXI Stream Interface
 
 This repository contains the Vivado HLS, Vivado project and SDK files that I created following the youtube tutorial below. Instead of the ZedBoard, I used the Pynq-Z1 board. The Vivado project files are in the pynq_run folder.
 
