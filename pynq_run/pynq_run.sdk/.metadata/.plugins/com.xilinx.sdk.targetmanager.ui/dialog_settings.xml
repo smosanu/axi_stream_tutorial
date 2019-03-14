@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="false" key="ZynqStream_wrapper_hw_platform_0-partial_bit"/>
+	<item value="" key="ZynqStream_wrapper_hw_platform_0-bmmFile"/>
+	<item value="ZynqStream_wrapper_hw_platform_0" key="programfpga.hwplatform"/>
+	<item value="Local" key="ZynqStream_wrapper_hw_platform_0-target"/>
+	<item value="ZynqStream_wrapper.bit" key="ZynqStream_wrapper_hw_platform_0-bitFile"/>
+	<item value="Auto Detect" key="ZynqStream_wrapper_hw_platform_0-device"/>
+</section>

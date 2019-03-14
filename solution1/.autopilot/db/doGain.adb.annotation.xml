@@ -1,0 +1,7 @@
+<annotationInfo>
+<annotationInfo>
+<item  id="40" filename="axi_stream_tutorial/core.cpp" linenumber="12" name="exitcond" contextFuncName="doGain" moduleName="doGain" rtlName="exitcond_fu_138_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="13" fileDirectory="D:\WS"><\/item>
+<item  id="42" filename="axi_stream_tutorial/core.cpp" linenumber="12" name="idx_1" contextFuncName="doGain" moduleName="doGain" rtlName="idx_1_fu_144_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="14" fileDirectory="D:\WS"><\/item>
+<item  id="55" filename="axi_stream_tutorial/core.cpp" linenumber="18" name="valOut_data_V" contextFuncName="doGain" moduleName="doGain" rtlName="valOut_data_V_fu_178_p2" latency="0" BRAM="-1" DSP="3" FF="0" LUT="20" fileDirectory="D:\WS"><\/item>
+<\/annotationInfo>
+</annotationInfo>

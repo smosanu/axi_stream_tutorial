@@ -1,0 +1,208 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/WS/axi_stream_tutorial/solution1/sim/verilog
+vAESL_axi_s_inStream
+Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z2 !s110 1552575551
+!i10b 1
+!s100 4AQ^U;0iB3Yi84Bo5>G:80
+IFnWYZUk;3[2lD0f2BYmk=2
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+!s105 AESL_axi_s_inStream_v_unit
+S1
+R0
+Z4 w1552575549
+8AESL_axi_s_inStream.v
+FAESL_axi_s_inStream.v
+Z5 L0 28
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1552575551.000000
+!s107 AESL_axi_s_inStream.v|
+!s90 -sv|-work|work|AESL_axi_s_inStream.v|
+!i113 1
+Z8 o-sv -work work
+Z9 tCvgOpt 0
+n@a@e@s@l_axi_s_in@stream
+vAESL_axi_s_outStream
+R1
+R2
+!i10b 1
+!s100 Vl<cEdQ=@O=b8F^]oGBG93
+I7>m@g^j9Q]^Kc83RP3Yf_3
+R3
+!s105 AESL_axi_s_outStream_v_unit
+S1
+R0
+R4
+8AESL_axi_s_outStream.v
+FAESL_axi_s_outStream.v
+R5
+R6
+r1
+!s85 0
+31
+R7
+!s107 AESL_axi_s_outStream.v|
+!s90 -sv|-work|work|AESL_axi_s_outStream.v|
+!i113 1
+R8
+R9
+n@a@e@s@l_axi_s_out@stream
+vAESL_axi_slave_CTRL
+R1
+R2
+!i10b 1
+!s100 OzD@81Lz3GM^;RfTBgXSA2
+Im3ekMDzh:V^?zT[Z=dWN21
+R3
+!s105 AESL_axi_slave_CTRL_v_unit
+S1
+R0
+R4
+8AESL_axi_slave_CTRL.v
+FAESL_axi_slave_CTRL.v
+L0 11
+R6
+r1
+!s85 0
+31
+R7
+!s107 AESL_axi_slave_CTRL.v|
+!s90 -sv|-work|work|AESL_axi_slave_CTRL.v|
+!i113 1
+R8
+R9
+n@a@e@s@l_axi_slave_@c@t@r@l
+vapatb_doGain_top
+R1
+Z10 !s110 1552575552
+!i10b 1
+!s100 b_:^6Phk`JJe;I?bScOWY0
+IA5;De932klj561Dl78oHZ1
+R3
+!s105 doGain_autotb_v_unit
+S1
+R0
+R4
+8doGain.autotb.v
+FdoGain.autotb.v
+L0 79
+R6
+r1
+!s85 0
+31
+Z11 !s108 1552575552.000000
+!s107 doGain.autotb.v|
+!s90 -sv|-work|work|doGain.autotb.v|
+!i113 1
+R8
+R9
+napatb_do@gain_top
+vdoGain
+R1
+R10
+!i10b 1
+!s100 3OYNILQbWbnjmgBWz>iD_3
+IWfQYTD^kZf2MlAm9eKoWM1
+R3
+!s105 doGain_v_unit
+S1
+R0
+w1552573349
+8doGain.v
+FdoGain.v
+L0 12
+R6
+r1
+!s85 0
+31
+R11
+!s107 doGain.v|
+!s90 -sv|-work|work|doGain.v|
+!i113 1
+R8
+R9
+ndo@gain
+vdoGain_CTRL_s_axi
+R1
+R10
+!i10b 1
+!s100 S74zYL7JT7iLDJ4P5zJOc0
+IPK:`8RDiRi4H>oX1E?dcz2
+R3
+!s105 doGain_CTRL_s_axi_v_unit
+S1
+R0
+w1552573350
+8doGain_CTRL_s_axi.v
+FdoGain_CTRL_s_axi.v
+L0 9
+R6
+r1
+!s85 0
+31
+R11
+!s107 doGain_CTRL_s_axi.v|
+!s90 -sv|-work|work|doGain_CTRL_s_axi.v|
+!i113 1
+R8
+R9
+ndo@gain_@c@t@r@l_s_axi
+vfifo
+R1
+R10
+!i10b 1
+!s100 >:[kO<cdcho;A:PEYj]<>2
+IT=eW7;Ae:[d>4TGSOfPhe1
+R3
+!s105 AESL_fifo_v_unit
+S1
+R0
+R4
+8AESL_fifo.v
+FAESL_fifo.v
+L0 3
+R6
+r1
+!s85 0
+31
+R11
+!s107 AESL_fifo.v|
+!s90 -sv|-work|work|AESL_fifo.v|
+!i113 1
+R8
+R9
+vglbl
+R1
+R2
+!i10b 1
+!s100 hDgEfEQc?7RG;`7Ja9A:53
+IQd1_RoljVRmI6Eh_Z7F9`3
+R3
+!s105 glbl_v_unit
+S1
+R0
+w1544155481
+8glbl.v
+Fglbl.v
+L0 6
+R6
+r1
+!s85 0
+31
+R7
+!s107 glbl.v|
+!s90 -sv|-work|work|glbl.v|
+!i113 1
+R8
+R9

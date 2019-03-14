@@ -1,0 +1,65 @@
+#include <stdio.h>
+#include <xparameters.h>
+#include "xdogain.h"
+#include "xaxidma.h"
+
+XDogain doGain;
+XDogain_Config *doGain_cfg;
+XAxiDma axiDMA;
+XAxiDma_Config *axiDMA_cfg;
+
+#define MEM_BASE_ADDR 0x01000000
+#define TX_BUFFER_BASE (MEM_BASE_ADDR+0x00100000)
+#define RX_BUFFER_BASE (MEM_BASE_ADDR+0x00300000)
+
+#define SIZE_ARR 1000
+int inStreamData[SIZE_ARR];
+
+void initPeripherals() {
+	printf("initializing doGain\n");
+	doGain_cfg = XDogain_LookupConfig(XPAR_DOGAIN_0_DEVICE_ID);
+	if (doGain_cfg) {
+		int status = XDogain_CfgInitialize(&doGain, doGain_cfg);
+		if (status != XST_SUCCESS)
+			printf("Error initializing doGain core\n");
+	}
+
+	printf("initializing AxiDMA\n");
+	axiDMA_cfg = XAxiDma_LookupConfig(XPAR_AXIDMA_0_DEVICE_ID);
+	if (axiDMA_cfg) {
+		int status = XAxiDma_CfgInitialize(&axiDMA, axiDMA_cfg);
+		if (status != XST_SUCCESS)
+			printf("Error initializing AxiDMA core\n");
+	}
+
+	XAxiDma_IntrDisable(&axiDMA, XAXIDMA_IRQ_ALL_MASK, XAXIDMA_DEVICE_TO_DMA);
+	XAxiDma_IntrDisable(&axiDMA, XAXIDMA_IRQ_ALL_MASK, XAXIDMA_DMA_TO_DEVICE);
+}
+
+int main() {
+	int *m_dma_buffer_TX = (int*) TX_BUFFER_BASE;
+	int *m_dma_buffer_RX = (int*) RX_BUFFER_BASE;
+
+	initPeripherals();
+
+	for (int idx = 0; idx < SIZE_ARR; idx++) {
+		inStreamData[idx] = idx;
+	}
+
+	while (true) {
+		int gain;
+		printf("Input gain: ");
+		scanf("%d", &gain);
+		XDogain_Set_gain(&doGain, gain);
+		XDogain_Start(&doGain);
+
+		Xil_DCacheFlushRange((u32) inStreamData, SIZE_ARR * sizeof(int));
+		Xil_DCacheFlushRange((u32) m_dma_buffer_RX, SIZE_ARR * sizeof(int));
+
+		printf("Sending data to IP core slave\n");
+		XAxiDma_SimpleTransfer(&axiDMA, (u32) inStreamData, SIZE_ARR * sizeof(int), XAXIDMA_DMA_TO_DEVICE);
+
+	}
+
+	return 0;
+}

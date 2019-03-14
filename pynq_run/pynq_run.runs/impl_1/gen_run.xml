@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7z020clg400-1" LaunchTime="1552580801">
+  <File Type="BITSTR-BMM" Name="ZynqStream_wrapper_bd.bmm"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="ZynqStream_wrapper_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="ZynqStream_wrapper_timing_summary_init.rpt"/>
+  <File Type="ROUTE-PWR" Name="ZynqStream_wrapper_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="ZynqStream_wrapper.tcl"/>
+  <File Type="OPT-TIMING" Name="ZynqStream_wrapper_timing_summary_opted.rpt"/>
+  <File Type="OPT-DCP" Name="ZynqStream_wrapper_opt.dcp"/>
+  <File Type="ROUTE-PWR-SUM" Name="ZynqStream_wrapper_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="ZynqStream_wrapper_reports.tcl"/>
+  <File Type="OPT-DRC" Name="ZynqStream_wrapper_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="ZynqStream_wrapper.hwdef"/>
+  <File Type="PWROPT-DCP" Name="ZynqStream_wrapper_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="ZynqStream_wrapper_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="ZynqStream_wrapper_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="ZynqStream_wrapper_placed.dcp"/>
+  <File Type="PLACE-IO" Name="ZynqStream_wrapper_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="ZynqStream_wrapper_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="ZynqStream_wrapper_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="ZynqStream_wrapper_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="ZynqStream_wrapper_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="ZynqStream_wrapper_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="ZynqStream_wrapper_incremental_reuse_pre_placed.rpt"/>
+  <File Type="BG-BGN" Name="ZynqStream_wrapper.bgn"/>
+  <File Type="PLACE-TIMING" Name="ZynqStream_wrapper_timing_summary_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="ZynqStream_wrapper_postplace_pwropt.dcp"/>
+  <File Type="BG-BIN" Name="ZynqStream_wrapper.bin"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="ZynqStream_wrapper_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="ZynqStream_wrapper_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="ZynqStream_wrapper_drc_physopted.rpt"/>
+  <File Type="BITSTR-MSK" Name="ZynqStream_wrapper.msk"/>
+  <File Type="PHYSOPT-TIMING" Name="ZynqStream_wrapper_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="ZynqStream_wrapper_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="ZynqStream_wrapper_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="ZynqStream_wrapper_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="ZynqStream_wrapper_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="ZynqStream_wrapper_drc_routed.pb"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="ZynqStream_wrapper.ltx"/>
+  <File Type="ROUTE-DRC-RPX" Name="ZynqStream_wrapper_drc_routed.rpx"/>
+  <File Type="BITSTR-MMI" Name="ZynqStream_wrapper.mmi"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="ZynqStream_wrapper_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="ZynqStream_wrapper_methodology_drc_routed.rpx"/>
+  <File Type="BITSTR-SYSDEF" Name="ZynqStream_wrapper.sysdef"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="ZynqStream_wrapper_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="ZynqStream_wrapper_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="ZynqStream_wrapper_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="ZynqStream_wrapper_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="ZynqStream_wrapper_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="ZynqStream_wrapper_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="ZynqStream_wrapper_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="ZynqStream_wrapper_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="ZynqStream_wrapper_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="ZynqStream_wrapper_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="ZynqStream_wrapper_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="ZynqStream_wrapper_bus_skew_routed.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="ZynqStream_wrapper_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="ZynqStream_wrapper_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="ZynqStream_wrapper_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="ZynqStream_wrapper_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="ZynqStream_wrapper_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="ZynqStream_wrapper_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="ZynqStream_wrapper_bus_skew_postroute_physopted.pb"/>
+  <File Type="BG-BIT" Name="ZynqStream_wrapper.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="ZynqStream_wrapper_bus_skew_postroute_physopted.rpx"/>
+  <File Type="BITSTR-RBT" Name="ZynqStream_wrapper.rbt"/>
+  <File Type="BITSTR-NKY" Name="ZynqStream_wrapper.nky"/>
+  <File Type="BG-DRC" Name="ZynqStream_wrapper.drc"/>
+  <File Type="RDI-RDI" Name="ZynqStream_wrapper.vdi"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/bd/ZynqStream/ZynqStream.bd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/ZynqStream/hdl/ZynqStream_wrapper.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="ZynqStream_wrapper"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
+      <Desc>Default settings for Implementation.</Desc>
+    </StratHandle>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="ZynqStream_auto_pc_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="ZynqStream_xbar_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="ZynqStream_doGain_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="ZynqStream_axi_dma_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="ZynqStream_axi_smc_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="ZynqStream_rst_ps7_0_100M_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="ZynqStream_processing_system7_0_0"/>
+</GenRun>

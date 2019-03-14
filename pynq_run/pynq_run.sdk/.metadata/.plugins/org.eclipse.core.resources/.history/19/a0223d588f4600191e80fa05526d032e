@@ -1,0 +1,9 @@
+#include <stdio.h>
+#include <xparameters.h>
+#include "xdogain.h"
+#include "xaxidma.h"
+
+int main()
+{
+	return 0;
+}

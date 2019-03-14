@@ -1,0 +1,117 @@
+# do cosim.modelsim.scr
+# 
+#     set fl [open ".exit.err" w]
+#     puts $fl "Elaboration errors in executing modelsim simulator"
+#     close $fl
+#     quit
+# 
+# C:/clibs
+# nt64
+# 1
+# C:/clibs/questa/10.5b/nt64/lib
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work work 
+# Copying C:/Dev/intelFPGA_lite/18.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:59:11 on Mar 14,2019
+# vlog -sv -work work glbl.v 
+# -- Compiling module glbl
+# 
+# Top level modules:
+# 	glbl
+# End time: 10:59:11 on Mar 14,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:59:11 on Mar 14,2019
+# vlog -sv -work work AESL_axi_slave_CTRL.v 
+# -- Compiling module AESL_axi_slave_CTRL
+# 
+# Top level modules:
+# 	AESL_axi_slave_CTRL
+# End time: 10:59:11 on Mar 14,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:59:11 on Mar 14,2019
+# vlog -sv -work work AESL_axi_s_inStream.v 
+# -- Compiling module AESL_axi_s_inStream
+# 
+# Top level modules:
+# 	AESL_axi_s_inStream
+# End time: 10:59:11 on Mar 14,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:59:11 on Mar 14,2019
+# vlog -sv -work work AESL_axi_s_outStream.v 
+# -- Compiling module AESL_axi_s_outStream
+# 
+# Top level modules:
+# 	AESL_axi_s_outStream
+# End time: 10:59:12 on Mar 14,2019, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:59:12 on Mar 14,2019
+# vlog -sv -work work AESL_fifo.v 
+# -- Compiling module fifo
+# 
+# Top level modules:
+# 	fifo
+# End time: 10:59:12 on Mar 14,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:59:12 on Mar 14,2019
+# vlog -sv -work work doGain.autotb.v 
+# -- Compiling module apatb_doGain_top
+# 
+# Top level modules:
+# 	apatb_doGain_top
+# End time: 10:59:12 on Mar 14,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:59:12 on Mar 14,2019
+# vlog -sv -work work doGain.v 
+# -- Compiling module doGain
+# 
+# Top level modules:
+# 	doGain
+# End time: 10:59:12 on Mar 14,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:59:12 on Mar 14,2019
+# vlog -sv -work work doGain_CTRL_s_axi.v 
+# -- Compiling module doGain_CTRL_s_axi
+# 
+# Top level modules:
+# 	doGain_CTRL_s_axi
+# End time: 10:59:12 on Mar 14,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -debugDB -t 10ps -voptargs=""+acc"" -L work -L unisims_ver -L xpm apatb_doGain_top glbl -suppress 6630 -wlf doGain.wlf 
+# Start time: 10:59:12 on Mar 14,2019
+# Loading sv_std.std
+# Loading work.apatb_doGain_top
+# Loading work.doGain
+# Loading work.doGain_CTRL_s_axi
+# Loading work.AESL_axi_s_inStream
+# Loading work.fifo
+# Loading work.AESL_axi_s_outStream
+# Loading work.AESL_axi_slave_CTRL
+# Loading work.glbl
+# ** Note: (vsim-8900) Creating design debug database vsim.dbg.
+# It appears vopt was not run with -debugdb option on this design.
+# Advanced Causality and Schematic debug features will not be available.
+# Variable Constant Generic SpecParam Memory Assertion Cover Endpoint ScVariable CellInternal ImmediateAssert VHDLFile
+# 1
+# 1
+# ////////////////////////////////////////////////////////////////////////////////////
+# // Inter-Transaction Progress: Completed Transaction / Total Transaction
+# // Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+# //
+# // RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+# ////////////////////////////////////////////////////////////////////////////////////
+# // RTL Simulation : 0 / 1 [0.00%] @ "12500"
+# // RTL Simulation : 1 / 1 [100.00%] @ "1044500"
+# ////////////////////////////////////////////////////////////////////////////////////
+# ** Note: $finish    : doGain.autotb.v(470)
+#    Time: 10485 ns  Iteration: 1  Instance: /apatb_doGain_top
+# End time: 10:59:13 on Mar 14,2019, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0

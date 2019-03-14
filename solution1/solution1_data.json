@@ -1,0 +1,691 @@
+{
+  "Top": "doGain",
+  "RtlTop": "doGain",
+  "RtlPrefix": "",
+  "SourceLanguage": "cpp",
+  "ResetStyle": "control",
+  "GenerateBdFiles": "1",
+  "HostMachineBits": "64",
+  "Target": {
+    "Family": "zynq",
+    "Device": "xc7z020",
+    "Package": "clg400",
+    "Speed": "-1"
+  },
+  "HlsSolution": {"Config": [
+      "config_export -description {Multiplies stream by 5}",
+      "config_export -display_name=axi_stream_x5",
+      "config_export -format=ip_catalog",
+      "config_export -rtl=verilog",
+      "config_export -vendor=UVA_HPLP"
+    ]},
+  "ClockInfo": {
+    "ClockName": "ap_clk",
+    "ClockPeriod": "10",
+    "IsCombLogic": "0",
+    "II": "x",
+    "Latency": "1003",
+    "Uncertainty": "1.25"
+  },
+  "Xdc": {"OocClocks": ["create_clock -name ap_clk -period 10.000 [get_ports ap_clk]"]},
+  "Ipx": {
+    "Vendor": "UVA_HPLP",
+    "Library": "hls",
+    "Name": "doGain",
+    "Version": "1.0",
+    "DisplayName": "axi_stream_x5",
+    "Revision": "",
+    "Description": "Multiplies stream by 5",
+    "Taxonomy": "\/VIVADO_HLS_IP",
+    "AutoFamilySupport": ""
+  },
+  "Files": {
+    "CSource": ["..\/core.cpp"],
+    "Vhdl": [
+      "impl\/vhdl\/doGain_CTRL_s_axi.vhd",
+      "impl\/vhdl\/doGain.vhd"
+    ],
+    "Verilog": [
+      "impl\/verilog\/doGain_CTRL_s_axi.v",
+      "impl\/verilog\/doGain.v"
+    ],
+    "SwDriver": [
+      "impl\/misc\/drivers\/doGain_v1_0\/data\/doGain.mdd",
+      "impl\/misc\/drivers\/doGain_v1_0\/data\/doGain.tcl",
+      "impl\/misc\/drivers\/doGain_v1_0\/src\/Makefile",
+      "impl\/misc\/drivers\/doGain_v1_0\/src\/xdogain.c",
+      "impl\/misc\/drivers\/doGain_v1_0\/src\/xdogain.h",
+      "impl\/misc\/drivers\/doGain_v1_0\/src\/xdogain_hw.h",
+      "impl\/misc\/drivers\/doGain_v1_0\/src\/xdogain_linux.c",
+      "impl\/misc\/drivers\/doGain_v1_0\/src\/xdogain_sinit.c"
+    ],
+    "Misc": ["impl\/misc\/logo.png"],
+    "DesignXml": "D:\/WS\/axi_stream_tutorial\/solution1\/.autopilot\/db\/doGain.design.xml"
+  },
+  "SubcoreInfo": {
+    "HasXpmMemory": false,
+    "HasClockedDsp": false,
+    "IP": []
+  },
+  "Interfaces": {
+    "ap_clk": {
+      "type": "clock",
+      "ctype": {"CLK": {"Type": "bool"}},
+      "buses": "s_axi_CTRL inStream outStream",
+      "reset": "ap_rst_n"
+    },
+    "ap_rst_n": {
+      "type": "reset",
+      "polarity": "ACTIVE_LOW",
+      "ctype": {"RST": {"Type": "bool"}}
+    },
+    "inStream": {
+      "type": "axi4stream",
+      "mode": "slave",
+      "port_prefix": "inStream",
+      "has_tready": "1",
+      "ctype": {
+        "TDATA": {
+          "Type": "integer signed",
+          "Width": "32"
+        },
+        "TVALID": {"Type": "bool"},
+        "TREADY": {"Type": "bool"},
+        "TDEST": {
+          "Type": "integer unsigned",
+          "Width": "6"
+        },
+        "TKEEP": {
+          "Type": "integer unsigned",
+          "Width": "4"
+        },
+        "TSTRB": {
+          "Type": "integer unsigned",
+          "Width": "4"
+        },
+        "TUSER": {
+          "Type": "integer unsigned",
+          "Width": "2"
+        },
+        "TLAST": {
+          "Type": "integer unsigned",
+          "Width": "1"
+        },
+        "TID": {
+          "Type": "integer unsigned",
+          "Width": "5"
+        }
+      },
+      "port_width": {
+        "TDATA": "32",
+        "TDEST": "6",
+        "TID": "5",
+        "TKEEP": "4",
+        "TLAST": "1",
+        "TSTRB": "4",
+        "TUSER": "2"
+      }
+    },
+    "interrupt": {
+      "type": "interrupt",
+      "ctype": {"INTERRUPT": {"Type": "bool"}}
+    },
+    "outStream": {
+      "type": "axi4stream",
+      "mode": "master",
+      "port_prefix": "outStream",
+      "has_tready": "1",
+      "ctype": {
+        "TDATA": {
+          "Type": "integer signed",
+          "Width": "32"
+        },
+        "TREADY": {"Type": "bool"},
+        "TVALID": {"Type": "bool"},
+        "TDEST": {
+          "Type": "integer unsigned",
+          "Width": "6"
+        },
+        "TKEEP": {
+          "Type": "integer unsigned",
+          "Width": "4"
+        },
+        "TSTRB": {
+          "Type": "integer unsigned",
+          "Width": "4"
+        },
+        "TUSER": {
+          "Type": "integer unsigned",
+          "Width": "2"
+        },
+        "TLAST": {
+          "Type": "integer unsigned",
+          "Width": "1"
+        },
+        "TID": {
+          "Type": "integer unsigned",
+          "Width": "5"
+        }
+      },
+      "port_width": {
+        "TDATA": "32",
+        "TDEST": "6",
+        "TID": "5",
+        "TKEEP": "4",
+        "TLAST": "1",
+        "TSTRB": "4",
+        "TUSER": "2"
+      }
+    },
+    "s_axi_CTRL": {
+      "type": "axi4lite",
+      "is_adaptor": "true",
+      "mode": "slave",
+      "port_prefix": "s_axi_CTRL",
+      "param_prefix": "C_S_AXI_CTRL",
+      "addr_bits": "5",
+      "registers": [
+        {
+          "offset": "0x00",
+          "name": "CTRL",
+          "access": "RW",
+          "reset_value": "0x0",
+          "description": "Control signals",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "AP_START",
+              "access": "RW",
+              "reset_value": "0",
+              "description": "Control signal Register for 'ap_start'."
+            },
+            {
+              "offset": "1",
+              "width": "1",
+              "name": "AP_DONE",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Control signal Register for 'ap_done'."
+            },
+            {
+              "offset": "2",
+              "width": "1",
+              "name": "AP_IDLE",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Control signal Register for 'ap_idle'."
+            },
+            {
+              "offset": "3",
+              "width": "1",
+              "name": "AP_READY",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Control signal Register for 'ap_ready'."
+            },
+            {
+              "offset": "4",
+              "width": "3",
+              "name": "RESERVED_1",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Reserved.  0s on read."
+            },
+            {
+              "offset": "7",
+              "width": "1",
+              "name": "AUTO_RESTART",
+              "access": "RW",
+              "reset_value": "0",
+              "description": "Control signal Register for 'auto_restart'."
+            },
+            {
+              "offset": "8",
+              "width": "24",
+              "name": "RESERVED_2",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x04",
+          "name": "GIER",
+          "access": "RW",
+          "reset_value": "0x0",
+          "description": "Global Interrupt Enable Register",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "Enable",
+              "access": "RW",
+              "reset_value": "0",
+              "description": "Master enable for the device interrupt output to the system interrupt controller: 0 = Disabled, 1 = Enabled"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x08",
+          "name": "IP_IER",
+          "access": "RW",
+          "reset_value": "0x0",
+          "description": "IP Interrupt Enable Register",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "CHAN0_INT_EN",
+              "access": "RW",
+              "reset_value": "0",
+              "description": "Enable Channel 0 (ap_done) Interrupt.  0 = Disabled, 1 = Enabled."
+            },
+            {
+              "offset": "1",
+              "width": "1",
+              "name": "CHAN1_INT_EN",
+              "access": "RW",
+              "reset_value": "0",
+              "description": "Enable Channel 1 (ap_ready) Interrupt.  0 = Disabled, 1 = Enabled."
+            },
+            {
+              "offset": "2",
+              "width": "30",
+              "name": "RESERVED",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x0c",
+          "name": "IP_ISR",
+          "access": "RW",
+          "reset_value": "0x0",
+          "description": "IP Interrupt Status Register",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "CHAN0_INT_ST",
+              "access": "RTOW",
+              "reset_value": "0",
+              "description": "Channel 0 (ap_done) Interrupt Status. 0 = No Channel 0 input interrupt, 1 = Channel 0 input interrup"
+            },
+            {
+              "offset": "1",
+              "width": "1",
+              "name": "CHAN1_INT_ST",
+              "access": "RTOW",
+              "reset_value": "0",
+              "description": "Channel 1 (ap_ready) Interrupt Status. 0 = No Channel 1 input interrupt, 1 = Channel 1 input interrup"
+            },
+            {
+              "offset": "2",
+              "width": "30",
+              "name": "RESERVED",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x10",
+          "name": "gain",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of gain",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "gain",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of gain"
+            }]
+        }
+      ],
+      "memories": "",
+      "ctype": {
+        "AWVALID": {"Type": "bool"},
+        "AWREADY": {"Type": "bool"},
+        "WVALID": {"Type": "bool"},
+        "WREADY": {"Type": "bool"},
+        "BVALID": {"Type": "bool"},
+        "BREADY": {"Type": "bool"},
+        "BRESP": {
+          "Type": "integer unsigned",
+          "Width": "2"
+        },
+        "ARVALID": {"Type": "bool"},
+        "ARREADY": {"Type": "bool"},
+        "RVALID": {"Type": "bool"},
+        "RREADY": {"Type": "bool"},
+        "RRESP": {
+          "Type": "integer unsigned",
+          "Width": "2"
+        },
+        "AWADDR": {
+          "Type": "integer unsigned",
+          "Width": "5"
+        },
+        "WDATA": {
+          "Type": "integer signed",
+          "Width": "32"
+        },
+        "WSTRB": {
+          "Type": "integer unsigned",
+          "Width": "4"
+        },
+        "ARADDR": {
+          "Type": "integer unsigned",
+          "Width": "5"
+        },
+        "RDATA": {
+          "Type": "integer signed",
+          "Width": "32"
+        }
+      },
+      "data_width": "32",
+      "port_width": {
+        "ARADDR": "5",
+        "AWADDR": "5",
+        "RDATA": "32",
+        "WDATA": "32",
+        "WSTRB": "4"
+      }
+    }
+  },
+  "RtlPorts": {
+    "s_axi_CTRL_AWVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "s_axi_CTRL_AWREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "s_axi_CTRL_AWADDR": {
+      "dir": "in",
+      "width": "5"
+    },
+    "s_axi_CTRL_WVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "s_axi_CTRL_WREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "s_axi_CTRL_WDATA": {
+      "dir": "in",
+      "width": "32"
+    },
+    "s_axi_CTRL_WSTRB": {
+      "dir": "in",
+      "width": "4"
+    },
+    "s_axi_CTRL_ARVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "s_axi_CTRL_ARREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "s_axi_CTRL_ARADDR": {
+      "dir": "in",
+      "width": "5"
+    },
+    "s_axi_CTRL_RVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "s_axi_CTRL_RREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "s_axi_CTRL_RDATA": {
+      "dir": "out",
+      "width": "32"
+    },
+    "s_axi_CTRL_RRESP": {
+      "dir": "out",
+      "width": "2"
+    },
+    "s_axi_CTRL_BVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "s_axi_CTRL_BREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "s_axi_CTRL_BRESP": {
+      "dir": "out",
+      "width": "2"
+    },
+    "ap_clk": {
+      "dir": "in",
+      "width": "1"
+    },
+    "ap_rst_n": {
+      "dir": "in",
+      "width": "1"
+    },
+    "interrupt": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "inStream_TDATA": {
+      "dir": "in",
+      "width": "32"
+    },
+    "inStream_TVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "inStream_TREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "inStream_TDEST": {
+      "dir": "in",
+      "width": "6"
+    },
+    "inStream_TKEEP": {
+      "dir": "in",
+      "width": "4"
+    },
+    "inStream_TSTRB": {
+      "dir": "in",
+      "width": "4"
+    },
+    "inStream_TUSER": {
+      "dir": "in",
+      "width": "2"
+    },
+    "inStream_TLAST": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "inStream_TID": {
+      "dir": "in",
+      "width": "5"
+    },
+    "outStream_TDATA": {
+      "dir": "out",
+      "width": "32"
+    },
+    "outStream_TREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "outStream_TVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "outStream_TDEST": {
+      "dir": "out",
+      "width": "6"
+    },
+    "outStream_TKEEP": {
+      "dir": "out",
+      "width": "4"
+    },
+    "outStream_TSTRB": {
+      "dir": "out",
+      "width": "4"
+    },
+    "outStream_TUSER": {
+      "dir": "out",
+      "width": "2"
+    },
+    "outStream_TLAST": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "outStream_TID": {
+      "dir": "out",
+      "width": "5"
+    }
+  },
+  "CPorts": {
+    "gain": {
+      "interfaceRef": "s_axi_CTRL",
+      "dir": "in",
+      "offset": "16",
+      "statusOffset": "NA",
+      "handshakeRef": "ap_none",
+      "Object": "CTRL"
+    },
+    "ap_ctrl": {
+      "interfaceRef": "s_axi_CTRL",
+      "dir": "in",
+      "offset": "0"
+    },
+    "inStream_V_data_V": {
+      "interfaceRef": "inStream",
+      "dir": "in"
+    },
+    "inStream_V_dest_V": {
+      "interfaceRef": "inStream",
+      "dir": "in"
+    },
+    "inStream_V_keep_V": {
+      "interfaceRef": "inStream",
+      "dir": "in"
+    },
+    "inStream_V_strb_V": {
+      "interfaceRef": "inStream",
+      "dir": "in"
+    },
+    "inStream_V_user_V": {
+      "interfaceRef": "inStream",
+      "dir": "in"
+    },
+    "inStream_V_last_V": {
+      "interfaceRef": "inStream",
+      "dir": "in"
+    },
+    "inStream_V_id_V": {
+      "interfaceRef": "inStream",
+      "dir": "in"
+    },
+    "outStream_V_data_V": {
+      "interfaceRef": "outStream",
+      "dir": "out",
+      "firstOutLatency": "2"
+    },
+    "outStream_V_dest_V": {
+      "interfaceRef": "outStream",
+      "dir": "out",
+      "firstOutLatency": "2"
+    },
+    "outStream_V_keep_V": {
+      "interfaceRef": "outStream",
+      "dir": "out",
+      "firstOutLatency": "2"
+    },
+    "outStream_V_strb_V": {
+      "interfaceRef": "outStream",
+      "dir": "out",
+      "firstOutLatency": "2"
+    },
+    "outStream_V_user_V": {
+      "interfaceRef": "outStream",
+      "dir": "out",
+      "firstOutLatency": "2"
+    },
+    "outStream_V_last_V": {
+      "interfaceRef": "outStream",
+      "dir": "out",
+      "firstOutLatency": "2"
+    },
+    "outStream_V_id_V": {
+      "interfaceRef": "outStream",
+      "dir": "out",
+      "firstOutLatency": "2"
+    }
+  },
+  "ModuleInfo": {
+    "Hierarchy": {"ModuleName": "doGain"},
+    "Metrics": {"doGain": {
+        "Latency": {
+          "LatencyBest": "1003",
+          "LatencyAvg": "1003",
+          "LatencyWorst": "1003",
+          "PipelineII": "1004",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "1.25",
+          "Estimate": "8.510"
+        },
+        "Loops": [{
+            "Name": "Loop 1",
+            "TripCount": "1000",
+            "Latency": "1001",
+            "PipelineII": "1",
+            "PipelineDepth": "3"
+          }],
+        "Area": {
+          "BRAM_18K": "0",
+          "DSP48E": "3",
+          "FF": "450",
+          "LUT": "737"
+        }
+      }}
+  },
+  "Sdx": {
+    "Target": "none",
+    "ProfileOption": "0",
+    "ProfileType": "none",
+    "XO": "",
+    "KernelName": "doGain",
+    "EnableXoSwEmu": "1"
+  },
+  "GenData": {
+    "DataVersion": "0.1",
+    "Time": "2019-03-14 11:30:05 -0400",
+    "ToolName": "vivado_hls",
+    "ToolVersion": "2018.3"
+  }
+}
